@@ -1,0 +1,21 @@
+import math
+
+x1=math.sqrt(10)
+x2=15/7
+x3=3.16
+x4=2.14
+
+def func(x1,x2,x3,x4):
+    absolute_error_x1 = abs(x1-x3)
+    rel_error_x1 = absolute_error_x1  / abs(x1)
+    absolute_error_x2 = abs(x2-x4)
+    rel_error_x2 = absolute_error_x1 /abs(x2)
+    
+    if rel_error_x1 < rel_error_x2:
+        print("Перша рівність є більш точною " )
+    elif rel_error_x2 < rel_error_x1:
+        print("Друга рівність є більш точною")
+    else:
+        print("Обидві рівності мають однакову точність")
+        
+func(x1,x2,x3,x4)
